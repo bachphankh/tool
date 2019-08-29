@@ -11,6 +11,10 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Log;
 class GoogleController extends Controller
 {
+    public function index(){
+        return view('welcome');
+    }
+
     public function getToken(){
         Log::info('received request');
 
@@ -27,7 +31,7 @@ class GoogleController extends Controller
             $client->setAccessToken($token);
             // store in the session also
             $_SESSION['upload_token'] = $token;
-            
+
         }
 // set the access token as part of the client
         if (!empty($_SESSION['upload_token'])) {

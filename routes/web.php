@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GoogleController@index')->name('home');
 
 Route::get('/g_token', 'GoogleController@getToken')->name('gg.getToken');
