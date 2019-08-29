@@ -1,10 +1,5 @@
 <?php
 
-
-echo "<pre>";
-print_r('va0');
-echo "</pre>";
-exit();
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
